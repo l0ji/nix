@@ -51,9 +51,14 @@
   services.openssh.enable = true;
 
   environment.systemPackages = with pkgs; [
+    cudatoolkit
     fastfetch
+    file
+    gcc
+    gnumake
     hyfetch
     lon
+    pciutils
     sbctl
     vim
     wget
