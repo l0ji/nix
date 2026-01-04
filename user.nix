@@ -41,19 +41,28 @@
       };
 
       home.packages = with pkgs; [
+        bun
         cider-2
         discord
         elixir
         elixir-ls
         ghostty
         gleam
+        htop
         jetbrains-toolbox
+        kdePackages.kdeconnect-kde
+        lmstudio
+        newsflash
         nil
         nixd
+        nodejs
         plex-desktop
         plexamp
+        pnpm
+        signal-desktop
         vencord
         vscodium
+        yarn
         zed-editor
       ];
 
