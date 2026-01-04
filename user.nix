@@ -52,6 +52,7 @@
         jetbrains-toolbox
         kdePackages.kdeconnect-kde
         lmstudio
+        mpv
         newsflash
         nil
         nixd
