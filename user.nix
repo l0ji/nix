@@ -3,11 +3,13 @@
   ...
 }:
 {
+  users.defaultUserShell = pkgs.zsh;
+
   users.users.penny = {
     isNormalUser = true;
     extraGroups = [
-      "wheel"
       "networkmanager"
+      "wheel"
     ];
     packages = with pkgs; [
       tree
@@ -26,6 +28,30 @@
       init = {
         defaultBranch = "main";
       };
+    };
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh = {
+      enable = true;
+      theme = "af-magic";
+      plugins = [
+        "bun"
+        "git"
+        "jj"
+        "mix"
+        "node"
+        "npm"
+        "ssh"
+        "sudo"
+        "systemd"
+        "tailscale"
+        "yarn"
+      ];
     };
   };
 
@@ -48,6 +74,7 @@
         gleam
         htop
         jetbrains-toolbox
+        jujutsu
         kdePackages.kdeconnect-kde
         lmstudio
         mpv
@@ -55,6 +82,7 @@
         nil
         nixd
         nodejs
+        opencode
         plex-desktop
         plexamp
         pnpm

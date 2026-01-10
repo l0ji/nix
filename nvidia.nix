@@ -28,4 +28,6 @@
     powerManagement.enable = false; # bs bug
     powerManagement.finegrained = false;
   };
+
+  hardware.nvidia-container-toolkit.enable = true;
 }
