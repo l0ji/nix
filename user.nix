@@ -6,6 +6,7 @@
   users.defaultUserShell = pkgs.zsh;
 
   users.users.penny = {
+    description = "Blu";
     isNormalUser = true;
     extraGroups = [
       "networkmanager"
