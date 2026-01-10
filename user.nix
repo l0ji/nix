@@ -91,6 +91,7 @@
         vscodium
         yarn
         zed-editor
+        zig
       ];
 
       home.stateVersion = "25.11";
