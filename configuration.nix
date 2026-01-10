@@ -23,6 +23,22 @@
     ];
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+    allowReboot = true;
+    rebootWindow = {
+      lower = "04:00";
+      upper = "06:00";
+    };
+  };
+
   environment.variables.EDITOR = "nano";
 
   system.stateVersion = "25.05";
