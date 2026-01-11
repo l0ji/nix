@@ -65,18 +65,28 @@
         allowUnfreePredicate = (_: true);
       };
 
+      # todo: not this shit
       home.packages = with pkgs; [
         bun
+        cabal-install
+        cargo
         cider-2
+        crystal
         discord
+        dmd
         elixir
         elixir-ls
+        erlang
+        erlang-language-platform
+        go
         ghostty
         gleam
+        ghc
         htop
         jetbrains-toolbox
         jujutsu
         kdePackages.kdeconnect-kde
+        kotlin
         lmstudio
         mpv
         newsflash
@@ -84,11 +94,16 @@
         nixd
         nodejs
         opencode
+        openjdk
         plex-desktop
         plexamp
         pnpm
+        ruby
+        rustc
         signal-desktop
+        uv
         vencord
+        vlang
         vscodium
         yarn
         zed-editor
