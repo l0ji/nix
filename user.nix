@@ -89,7 +89,7 @@
           cargo
           cider-2
           crystal
-          discord
+          #discord
           dmd
           elixir
           elixir-ls
@@ -118,11 +118,10 @@
           rustc
           signal-desktop
           uv
-          vencord
           vlang
           vscodium
           yarn
-          oldZed.zed-editor
+          zed-editor
           zig
         ]
         ++ (with pkgsUnstable; [
