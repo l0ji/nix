@@ -60,19 +60,12 @@
   home-manager.users.penny =
     { pkgs, ... }:
     let
-      pkgsUnstable = import <nixos-unstable> { };
-      oldZed = # fix later and use flakes or something
-        import
-          (pkgs.fetchFromGitHub {
-            owner = "NixOS";
-            repo = "nixpkgs";
-            rev = "64cd410b141f697c3db5ea25e110a9386fdc46f5";
-            sha256 = "sha256-8uhnBs+EqKW2raNZAV90yFXH9vcn81w2oC+Aso68Cuw=";
-          })
-          {
-            # fix later
-            inherit (pkgs) system;
-          };
+      # TODO: USE FLAKES
+      pkgsUnstable = import <nixos-unstable> {
+        config = {
+          allowUnfree = true;
+        };
+      };
     in
     {
       nixpkgs.config = {
@@ -89,15 +82,19 @@
           cargo
           cider-2
           crystal
-          #discord
+          discord
           dmd
           elixir
           elixir-ls
           erlang
           erlang-language-platform
+          esbuild
           go
           ghostty
+          gimp
+          github-cli
           ghc
+          helix
           htop
           jetbrains-toolbox
           jujutsu
@@ -110,13 +107,19 @@
           nixd
           nodejs
           opencode
+          openfortivpn
+          openfortivpn-webview
           openjdk
+          php84
           plex-desktop
           plexamp
           pnpm
+          prismlauncher
           ruby
           rustc
           signal-desktop
+          tailwindcss
+          trayscale
           uv
           vlang
           vscodium
