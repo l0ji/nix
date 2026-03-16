@@ -80,7 +80,7 @@
       font-family = "JetBrainsMono Nerd Font";
       font-size = 11;
       window-padding-x = 10;
-      window-padding-7 = 10;
+      window-padding-y = 10;
       cursor-style = "block";
     };
   };
