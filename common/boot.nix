@@ -1,15 +1,5 @@
-{ lib, pkgs, ... }:
-let
-  sources = import ./lon.nix;
-  lanzaboote = import sources.lanzaboote {
-    inherit pkgs;
-  };
-in
+{ lib, ... }:
 {
-  imports = [
-    lanzaboote.nixosModules.lanzaboote
-  ];
-
   boot = {
     kernel.sysctl."net.ipv4.ip_forward" = 1;
 
@@ -18,11 +8,6 @@ in
     loader.systemd-boot.consoleMode = "auto";
     loader.systemd-boot.edk2-uefi-shell.enable = true;
     loader.systemd-boot.configurationLimit = 2;
-
-    lanzaboote = {
-      enable = true;
-      pkiBundle = "/var/lib/sbctl";
-    };
 
     plymouth = {
       enable = true;
