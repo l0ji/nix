@@ -11,6 +11,7 @@
 
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
   };
 
   systemd.services.nvidia-control-devices = {

@@ -128,6 +128,12 @@
     enableSSHSupport = true;
   };
 
+  # probably a mistake
+  programs.steam.enable = true;
+
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+
   security.sudo = {
     enable = true;
     wheelNeedsPassword = false;
