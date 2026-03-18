@@ -17,12 +17,12 @@
     # todo: replace with shells and devenvs n shit AND STOP WITH THE PKGS
     packages = [
       pkgs.bun
-      pkgs.cabal-install
+      # pkgs.cabal-install
       pkgs.cargo
       pkgs.cider-2
-      pkgs.crystal
+      # pkgs.crystal
       pkgs.discord
-      #pkgs.dmd
+      # pkgs.dmd
       pkgs.elixir
       pkgs.elixir-ls
       pkgs.erlang
@@ -32,12 +32,11 @@
       pkgs.ghostty
       pkgs.gimp
       pkgs.github-cli
-      pkgs.ghc
+      # pkgs.ghc
       pkgs.helix
       pkgs.htop
       pkgs.jetbrains-toolbox
       pkgs.jujutsu
-      pkgs.kdePackages.kdeconnect-kde
       pkgs.kotlin
       pkgs.lmstudio
       pkgs.mpv
@@ -59,7 +58,6 @@
       pkgs.tailwindcss
       pkgs.trayscale
       pkgs.uv
-      pkgs.vlang
       pkgs.vscodium
       pkgs.yarn
       pkgs.zed-editor
