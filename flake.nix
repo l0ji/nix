@@ -51,7 +51,6 @@
 
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
               home-manager.backupFileExtension = "HMBackup";
               home-manager.users.penny = {
                 imports = [
