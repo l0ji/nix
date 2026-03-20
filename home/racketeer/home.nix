@@ -8,6 +8,13 @@
     allowUnfreePredicate = (_: true);
   };
 
+  catppuccin = {
+    flavor = "mocha";
+    alacritty = {
+      enable = true;
+    };
+  };
+
   home = {
     stateVersion = "25.11";
 
@@ -70,16 +77,55 @@
     # todo: look into home.file
   };
 
-  programs.ghostty = {
+  # programs.ghostty = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  #   settings = {
+  #     theme = "Catppuccin Mocha";
+  #     font-family = "JetBrainsMono Nerd Font";
+  #     font-size = 11;
+  #     window-padding-x = 10;
+  #     window-padding-y = 10;
+  #     cursor-style = "block";
+  #   };
+  # };
+
+  programs.alacritty = {
     enable = true;
-    enableZshIntegration = true;
     settings = {
-      theme = "Catppuccin Mocha";
-      font-family = "JetBrainsMono Nerd Font";
-      font-size = 11;
-      window-padding-x = 10;
-      window-padding-y = 10;
-      cursor-style = "block";
+      general.live_config_reload = true;
+      env.TERM = "xterm-256color";
+      window = {
+        dimensions = {
+          columns = 120;
+          rows = 38;
+        };
+        padding = {
+          x = 16;
+          y = 16;
+        };
+        dynamic_padding = true;
+        blur = true;
+        resize_increments = true;
+      };
+      font = {
+        normal = {
+          family = "JetBrains Mono Nerd Font";
+          style = "Regular";
+        };
+        size = 13;
+      };
+      cursor = {
+        style = {
+          shape = "Beam";
+          blinking = "On";
+        };
+        vi_mode_style = {
+          shape = "Block";
+          blinking = "Off";
+        };
+        thickness = 0.25;
+      };
     };
   };
 }

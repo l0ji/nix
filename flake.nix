@@ -11,6 +11,7 @@
       url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs =
@@ -28,6 +29,7 @@
             system = "x86_64-linux";
           };
           modules = [
+            catppuccin.nixosModules.catppuccin
             lanzaboote.nixosModules.lanzaboote
 
             ./hosts/racketeer
@@ -51,7 +53,12 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.backupFileExtension = "HMBackup";
-              home-manager.users.penny = ./home/racketeer/home.nix;
+              home-manager.users.penny = {
+                imports = [
+                  ./home/racketeer/home.nix
+                  catppuccin.homeModules.catppuccin
+                ];
+              };
               home-manager.extraSpecialArgs = {
                 inherit inputs;
                 system = "x86_64-linux";
