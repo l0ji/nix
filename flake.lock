@@ -131,6 +131,23 @@
         "type": "github"
       }
     },
+    "nixpkgs-discord-krisp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752534602,
+        "narHash": "sha256-6zNn0D5848w/vKcVndkAloixplo+QM6154rTyKEcQ1s=",
+        "owner": "samschlegel",
+        "repo": "nixpkgs",
+        "rev": "4d68add87c87542a0034c0eb3404885aef9d8d68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "samschlegel",
+        "ref": "samschlegel/use-fhsenv-for-discord-linux",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1773579282,
@@ -175,7 +192,8 @@
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "nixpkgs-discord-krisp": "nixpkgs-discord-krisp"
       }
     },
     "rust-overlay": {

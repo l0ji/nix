@@ -12,6 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
+    nixpkgs-discord-krisp = {
+      url = "github:samschlegel/nixpkgs/samschlegel/use-fhsenv-for-discord-linux";
+      flake = false;
+    };
   };
 
   outputs =

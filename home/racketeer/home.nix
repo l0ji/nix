@@ -1,7 +1,14 @@
 {
   pkgs,
+  inputs,
   ...
 }:
+let
+  discordPkgs = import inputs.nixpkgs-discord-krisp {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true;
+  };
+in
 {
   nixpkgs.config = {
     allowUnfree = true;
@@ -10,7 +17,7 @@
 
   catppuccin = {
     flavor = "mocha";
-    alacritty = {
+    kitty = {
       enable = true;
     };
   };
@@ -28,7 +35,7 @@
       pkgs.cargo
       pkgs.cider-2
       # pkgs.crystal
-      pkgs.discord
+      discordPkgs.discord
       # pkgs.dmd
       pkgs.elixir
       pkgs.elixir-ls
@@ -90,42 +97,33 @@
   #   };
   # };
 
-  programs.alacritty = {
+  programs.kitty = {
     enable = true;
     settings = {
-      general.live_config_reload = true;
-      env.TERM = "xterm-256color";
-      window = {
-        dimensions = {
-          columns = 120;
-          rows = 38;
-        };
-        padding = {
-          x = 16;
-          y = 16;
-        };
-        dynamic_padding = true;
-        blur = true;
-        resize_increments = true;
-      };
-      font = {
-        normal = {
-          family = "JetBrains Mono Nerd Font";
-          style = "Regular";
-        };
-        size = 13;
-      };
-      cursor = {
-        style = {
-          shape = "Beam";
-          blinking = "On";
-        };
-        vi_mode_style = {
-          shape = "Block";
-          blinking = "Off";
-        };
-        thickness = 0.25;
-      };
+      initial_window_width = "80c";
+      initial_window_height = "25c";
+      window_padding_width = 16;
+      resize_in_steps = true;
+      background_blur = 32;
+
+      font_family = "JetBrains Mono Nerd Font";
+      font_size = 12;
+      disable_ligatures = "never";
+
+      cursor_shape = "beam";
+      cursor_beam_thickness = 1.0;
+      cursor_blink_interval = 0.5;
+      cursor_stop_blinking_after = 0;
+
+      scrollback_lines = 2000;
+      scrollbar = "scrolled-and-hovered";
+
+      tab_bar_edge = "top";
+      tab_bar_align = "center";
+
+      shell = "zsh";
+      editor = "hx";
+      close_on_child_death = "yes";
     };
   };
 }
