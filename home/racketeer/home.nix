@@ -30,6 +30,7 @@ in
 
     # todo: replace with shells and devenvs n shit AND STOP WITH THE PKGS
     packages = [
+      pkgs.baobab
       pkgs.bun
       # pkgs.cabal-install
       pkgs.cargo
@@ -42,6 +43,9 @@ in
       pkgs.erlang
       pkgs.erlang-language-platform
       pkgs.esbuild
+      pkgs.gajim
+      pkgs.gemini-cli-bin
+      pkgs.github-copilot-cli
       pkgs.go
       pkgs.ghostty
       pkgs.gimp
@@ -66,6 +70,7 @@ in
       pkgs.plexamp
       pkgs.pnpm
       pkgs.prismlauncher
+      pkgs.python314
       pkgs.ruby
       pkgs.rustc
       pkgs.signal-desktop

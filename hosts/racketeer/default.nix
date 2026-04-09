@@ -98,6 +98,9 @@
   networking.hostName = "racketeer";
   networking.networkmanager.enable = true;
   networking.firewall.enable = false;
+  # networking.extraHosts = ''
+  #   0.0.0.0 popbob.wtf
+  # '';
 
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_US.UTF-8";
