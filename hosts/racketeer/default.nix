@@ -105,12 +105,19 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+  };
   services.pipewire = {
     enable = true;
     pulse.enable = true;
   };
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+  };
+  services.kubo = {
+    enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     cudatoolkit

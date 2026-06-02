@@ -36,6 +36,7 @@ in
       pkgs.cargo
       pkgs.cider-2
       # pkgs.crystal
+      pkgs.codex
       discordPkgs.discord
       # pkgs.dmd
       pkgs.elixir
@@ -71,6 +72,7 @@ in
       pkgs.pnpm
       pkgs.prismlauncher
       pkgs.python314
+      pkgs.racket
       pkgs.ruby
       pkgs.rustc
       pkgs.signal-desktop
@@ -129,6 +131,7 @@ in
       shell = "zsh";
       editor = "hx";
       close_on_child_death = "yes";
+      confirm_os_window_close = 0;
     };
   };
 }

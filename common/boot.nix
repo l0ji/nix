@@ -7,7 +7,7 @@
     loader.systemd-boot.enable = lib.mkForce false;
     loader.systemd-boot.consoleMode = "auto";
     loader.systemd-boot.edk2-uefi-shell.enable = true;
-    loader.systemd-boot.configurationLimit = 2;
+    loader.systemd-boot.configurationLimit = 1;
 
     plymouth = {
       enable = true;
