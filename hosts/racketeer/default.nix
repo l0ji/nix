@@ -1,4 +1,5 @@
 {
+  config,
   lib,
   pkgs,
   ...
@@ -32,6 +33,9 @@
     options = "--delete-older-than 30d";
   };
 
+  nix.optimise.automatic = true;
+  nix.settings.auto-optimise-store = true;
+
   system.autoUpgrade = {
     enable = true;
     dates = "weekly";
@@ -55,6 +59,14 @@
       tree
     ];
   };
+
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    v4l2loopback
+  ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+  '';
+  security.polkit.enable = true;
 
   programs.firefox = {
     enable = true;
@@ -126,6 +138,7 @@
     gcc
     gnumake
     hyfetch
+    inotify-tools
     lon
     pciutils
     vim
@@ -163,8 +176,10 @@
     enable = true;
     wlr.enable = true;
     extraPortals = with pkgs; [
+      xdg-desktop-portal
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-gnome
+      kdePackages.xdg-desktop-portal-kde
     ];
+    xdgOpenUsePortal = true;
   };
 }

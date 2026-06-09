@@ -16,8 +16,14 @@ in
   };
 
   catppuccin = {
+    enable = true;
+    autoEnable = false;
     flavor = "mocha";
+
     kitty = {
+      enable = true;
+    };
+    halloy = {
       enable = true;
     };
   };
@@ -29,60 +35,62 @@ in
     homeDirectory = "/home/penny";
 
     # todo: replace with shells and devenvs n shit AND STOP WITH THE PKGS
-    packages = [
-      pkgs.baobab
-      pkgs.bun
-      # pkgs.cabal-install
-      pkgs.cargo
-      pkgs.cider-2
-      # pkgs.crystal
-      pkgs.codex
+    packages = with pkgs; [
+      baobab
+      bolt-launcher
+      bun
+      # cabal-install
+      cargo
+      cider-2
+      # crystal
+      codex
       discordPkgs.discord
-      # pkgs.dmd
-      pkgs.elixir
-      pkgs.elixir-ls
-      pkgs.erlang
-      pkgs.erlang-language-platform
-      pkgs.esbuild
-      pkgs.gajim
-      pkgs.gemini-cli-bin
-      pkgs.github-copilot-cli
-      pkgs.go
-      pkgs.ghostty
-      pkgs.gimp
-      pkgs.github-cli
-      # pkgs.ghc
-      pkgs.helix
-      pkgs.htop
-      pkgs.jetbrains-toolbox
-      pkgs.jujutsu
-      pkgs.kotlin
-      pkgs.lmstudio
-      pkgs.mpv
-      pkgs.newsflash
-      pkgs.nil
-      pkgs.nixd
-      pkgs.nodejs
-      pkgs.opencode
-      pkgs.openfortivpn
-      pkgs.openfortivpn-webview
-      pkgs.openjdk
-      pkgs.php84
-      pkgs.plexamp
-      pkgs.pnpm
-      pkgs.prismlauncher
-      pkgs.python314
-      pkgs.racket
-      pkgs.ruby
-      pkgs.rustc
-      pkgs.signal-desktop
-      pkgs.tailwindcss
-      pkgs.trayscale
-      pkgs.uv
-      pkgs.vscodium
-      pkgs.yarn
-      pkgs.zed-editor
-      pkgs.zig
+      # dmd
+      elixir
+      elixir-ls
+      erlang
+      erlang-language-platform
+      esbuild
+      gajim
+      gemini-cli-bin
+      github-copilot-cli
+      go
+      ghostty
+      gimp
+      github-cli
+      # ghc
+      helix
+      htop
+      jetbrains-toolbox
+      jujutsu
+      kotlin
+      lmstudio
+      mpv
+      newsflash
+      nil
+      nixd
+      nodejs
+      obs-studio
+      opencode
+      openfortivpn
+      openfortivpn-webview
+      openjdk
+      php84
+      plexamp
+      pnpm
+      prismlauncher
+      python314
+      racket
+      ruby
+      rustc
+      signal-desktop
+      tailwindcss
+      trayscale
+      uv
+      vscodium
+      yarn
+      zed-editor
+      zig
     ];
     sessionVariables = {
       EDITOR = "hx";
@@ -132,6 +140,19 @@ in
       editor = "hx";
       close_on_child_death = "yes";
       confirm_os_window_close = 0;
+    };
+  };
+
+  programs.halloy = {
+    enable = true;
+    settings = {
+      servers = {
+        libera = {
+          nickname = "tyzias";
+          server = "irc.libera.chat";
+          channels = [ "#halloy" ];
+        };
+      };
     };
   };
 }
