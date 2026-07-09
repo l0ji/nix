@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.0.0";
+      url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
@@ -33,7 +33,6 @@
             system = "x86_64-linux";
           };
           modules = [
-            catppuccin.nixosModules.catppuccin
             lanzaboote.nixosModules.lanzaboote
 
             ./hosts/racketeer

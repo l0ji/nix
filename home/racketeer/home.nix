@@ -46,9 +46,9 @@ in
       codex
       discordPkgs.discord
       # dmd
-      elixir
+      beamPackages.elixir
       elixir-ls
-      erlang
+      beamPackages.erlang
       erlang-language-platform
       esbuild
       gajim
@@ -71,6 +71,7 @@ in
       nixd
       nodejs
       obs-studio
+      obsidian
       opencode
       openfortivpn
       openfortivpn-webview
