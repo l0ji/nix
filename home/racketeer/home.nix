@@ -76,6 +76,7 @@ in
       openfortivpn
       openfortivpn-webview
       openjdk
+      openrgb
       php84
       plexamp
       pnpm
@@ -85,6 +86,7 @@ in
       ruby
       rustc
       signal-desktop
+      sqlite
       tailwindcss
       trayscale
       uv
