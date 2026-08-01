@@ -34,7 +34,7 @@ in
     username = "penny";
     homeDirectory = "/home/penny";
 
-    # todo: replace with shells and devenvs n shit AND STOP WITH THE PKGS
+    # todo: replace with shells and devenvs n shit
     packages = with pkgs; [
       baobab
       bolt-launcher
