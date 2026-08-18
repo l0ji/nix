@@ -52,8 +52,6 @@ in
       erlang-language-platform
       esbuild
       gajim
-      gemini-cli-bin
-      github-copilot-cli
       go
       ghostty
       gimp
@@ -95,6 +93,7 @@ in
       zed-editor
       zig
     ];
+
     sessionVariables = {
       EDITOR = "hx";
     };
