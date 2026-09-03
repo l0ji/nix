@@ -57,9 +57,11 @@ in
       gimp
       github-cli
       # ghc
+      gleam
       helix
       htop
-      jetbrains-toolbox
+      jetbrains.goland
+      jetbrains.rider
       jujutsu
       kotlin
       lmstudio
@@ -81,6 +83,7 @@ in
       prismlauncher
       python314
       racket
+      rebar3
       ruby
       rustc
       signal-desktop
@@ -142,6 +145,7 @@ in
       editor = "hx";
       close_on_child_death = "yes";
       confirm_os_window_close = 0;
+      enable_audio_bell = "yes";
     };
   };
 
@@ -156,5 +160,16 @@ in
         };
       };
     };
+  };
+
+  programs.codexDesktopLinux = {
+    enable = true;
+    linuxFeatures = [
+      "api-key-model-visibility"
+      "api-key-service-tier"
+      "copilot-reasoning-effort"
+      "tray-usage"
+      "ui-tweaks"
+    ];
   };
 }

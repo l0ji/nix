@@ -16,6 +16,7 @@
       url = "github:samschlegel/nixpkgs/samschlegel/use-fhsenv-for-discord-linux";
       flake = false;
     };
+    codex-desktop-linux.url = "github:ilysenko/codex-desktop-linux";
   };
 
   outputs =
@@ -59,6 +60,7 @@
                 imports = [
                   ./home/racketeer/home.nix
                   catppuccin.homeModules.catppuccin
+                  codex-desktop-linux.homeManagerModules.default
                 ];
               };
               home-manager.extraSpecialArgs = {
