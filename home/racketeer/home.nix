@@ -84,6 +84,7 @@ in
       python314
       racket
       rebar3
+      remmina
       ruby
       rustc
       signal-desktop
