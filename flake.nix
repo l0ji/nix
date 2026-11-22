@@ -11,27 +11,36 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix";
-    nixpkgs-discord-krisp = {
-      url = "github:samschlegel/nixpkgs/samschlegel/use-fhsenv-for-discord-linux";
-      flake = false;
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    codex-desktop-linux.url = "github:ilysenko/codex-desktop-linux";
+    codex-desktop-linux = {
+      url = "github:ilysenko/codex-desktop-linux";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
+
 
   outputs =
     {
-      self,
+
+      nixpkgs,
       ...
     }@inputs:
     with inputs;
+    let
+      system = "x86_64-linux";
+
+    in
     {
+
       nixosConfigurations = {
         racketeer = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
           specialArgs = {
             inherit inputs;
-            system = "x86_64-linux";
+            inherit system;
           };
           modules = [
             lanzaboote.nixosModules.lanzaboote
@@ -65,7 +74,7 @@
               };
               home-manager.extraSpecialArgs = {
                 inherit inputs;
-                system = "x86_64-linux";
+                inherit system;
               };
             }
           ];

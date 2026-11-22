@@ -1,4 +1,7 @@
 {
-  services.tailscale.enable = true;
-  services.tailscale.useRoutingFeatures = "both";
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "both";
+    openFirewall = true;
+  };
 }

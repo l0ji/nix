@@ -1,0 +1,30 @@
+{
+  pkgs,
+  ...
+}:
+{
+  home.packages = with pkgs; [
+    baobab
+    bolt-launcher
+    cider-2
+    codex
+    discord
+    gajim
+    gimp
+    htop
+    jetbrains.goland
+    jetbrains.rider
+    lmstudio
+    newsflash
+    obs-studio
+    openfortivpn
+    openfortivpn-webview
+    openrgb
+    plexamp
+    prismlauncher
+    remmina
+    signal-desktop
+    sqlite
+    trayscale
+  ];
+}
