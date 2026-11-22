@@ -1,4 +1,6 @@
 
+{ inputs, pkgs, ... }:
+
 {
   imports = [
     ../modules/catppuccin.nix
@@ -13,6 +15,8 @@
     ../modules/tools.nix
     ../modules/direnv.nix
   ];
+
+  home.packages = [ inputs.albedo.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 
   programs.codexDesktopLinux = {
     enable = true;

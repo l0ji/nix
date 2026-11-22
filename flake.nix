@@ -15,6 +15,7 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    albedo.url = "git+https://tangled.org/okami.mom/albedo";
     codex-desktop-linux = {
       url = "github:ilysenko/codex-desktop-linux";
       inputs.nixpkgs.follows = "nixpkgs";

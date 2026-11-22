@@ -1,5 +1,32 @@
 {
   "nodes": {
+    "albedo": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "home-manager": "home-manager",
+        "import-tree": "import-tree",
+        "nixpkgs": "nixpkgs",
+        "pyproject-build-systems": "pyproject-build-systems",
+        "pyproject-nix": "pyproject-nix",
+        "tg": "tg",
+        "treefmt-nix": "treefmt-nix",
+        "usage-core": "usage-core",
+        "uv2nix": "uv2nix"
+      },
+      "locked": {
+        "lastModified": 1795303398,
+        "narHash": "sha256-fzCbjz1L4a0GfNs+4sgxMZt4FmIZIfGs2UroSinHP5E=",
+        "ref": "refs/heads/main",
+        "rev": "52028ec98bedfa9148faa0ec0c1b22314bba4ffd",
+        "revCount": 3374,
+        "type": "git",
+        "url": "https://tangled.org/okami.mom/albedo"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://tangled.org/okami.mom/albedo"
+      }
+    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": [
@@ -72,6 +99,24 @@
         "type": "github"
       }
     },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1790898470,
+        "narHash": "sha256-zTwuwezD0w3hpga6a6P8emidzAZFyWqlNeRBlpWOOl8=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "024633cd702b10285db5cb19b40ad48d2399ba60",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -93,6 +138,27 @@
     "home-manager": {
       "inputs": {
         "nixpkgs": [
+          "albedo",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793979366,
+        "narHash": "sha256-7OoWDsYO9teiPxl0QdlS5lYE20Pue8/5mpscSL32FUA=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "2c0c1f01521469cf0271180c453c79782d53c2f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "home-manager_2": {
+      "inputs": {
+        "nixpkgs": [
           "nixpkgs"
         ]
       },
@@ -107,6 +173,21 @@
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "import-tree": {
+      "locked": {
+        "lastModified": 1788467110,
+        "narHash": "sha256-ljEMTXP/rH0tOvDzc9gzwww6KcHRPRnEHzd9lK48V7s=",
+        "owner": "vic",
+        "repo": "import-tree",
+        "rev": "eb1b52eaecc57f7c136d07ae8a93e724dfecac46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "import-tree",
         "type": "github"
       }
     },
@@ -134,6 +215,37 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1793110635,
+        "narHash": "sha256-dhoW6VgFWlaodSY5jrBn+CF2FLmaUvDVgM7+C7T2+NM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "31ecbaca1bdefa45dffc409f0250bd8039ea0010",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1790477367,
+        "narHash": "sha256-oujbxmVKDhci2E4EM3KyAbRUgp5/IsCoiA/LfEF7OOk=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "f7cd230690d9fc982d06129f9189b101fddcfa3b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1795234589,
         "narHash": "sha256-f/VVvxf5RsQgWVhUtefoca5ktVg0DA2bnkMOcmSnozo=",
@@ -171,13 +283,64 @@
         "type": "github"
       }
     },
+    "pyproject-build-systems": {
+      "inputs": {
+        "nixpkgs": [
+          "albedo",
+          "nixpkgs"
+        ],
+        "pyproject-nix": [
+          "albedo",
+          "pyproject-nix"
+        ],
+        "uv2nix": [
+          "albedo",
+          "uv2nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794012432,
+        "narHash": "sha256-zBKFTg7tEGApNt+CEKI5+WNNomD5MZqYNBr+r6/Bmdg=",
+        "owner": "pyproject-nix",
+        "repo": "build-system-pkgs",
+        "rev": "bdbc5f8dd2ad6136bb2ccecb14f6ec343965b194",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pyproject-nix",
+        "repo": "build-system-pkgs",
+        "type": "github"
+      }
+    },
+    "pyproject-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "albedo",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793820880,
+        "narHash": "sha256-NUMabnvaL/0Ah9WM9pBMXEp+dQjMSYjezZ/fNjXouLQ=",
+        "owner": "pyproject-nix",
+        "repo": "pyproject.nix",
+        "rev": "d43f0e74444c1f266c640fc49ce6ce6fb69d33c3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pyproject-nix",
+        "repo": "pyproject.nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "albedo": "albedo",
         "catppuccin": "catppuccin",
         "codex-desktop-linux": "codex-desktop-linux",
-        "home-manager": "home-manager",
+        "home-manager": "home-manager_2",
         "lanzaboote": "lanzaboote",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "rust-overlay": {
@@ -213,6 +376,80 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793301292,
+        "narHash": "sha256-/CEkvZpDnfS4K/yjBX0w0P/l1Gr2a2WAkU50ttcNs5c=",
+        "ref": "refs/heads/master",
+        "rev": "1d013b170ade55fcfda8ed73535b67b0c7eff441",
+        "revCount": 182,
+        "type": "git",
+        "url": "https://tangled.org/aly.codes/tg"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://tangled.org/aly.codes/tg"
+      }
+    },
+    "treefmt-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "albedo",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791885023,
+        "narHash": "sha256-C3alQ2MEt0zVrUSho5NUDo3jmhbff72++bfwoqT9Omo=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "0d6d739a833ba9a9c93034862e4a7b061a062a1c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "usage-core": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-dKjqffpCenUg0nKEiAepCfRsQxRk5odins7AR+1CA0c=",
+        "type": "file",
+        "url": "https://api.next.tangled.org/xrpc/org.tangled.temp.git.getArchive?repo=did%3Aplc%3A2lf7buutfnfcucljnmaypf7u&ref=3951be3&format=tar.gz&prefix=provide-usage-main"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://api.next.tangled.org/xrpc/org.tangled.temp.git.getArchive?repo=did%3Aplc%3A2lf7buutfnfcucljnmaypf7u&ref=3951be3&format=tar.gz&prefix=provide-usage-main"
+      }
+    },
+    "uv2nix": {
+      "inputs": {
+        "nixpkgs": [
+          "albedo",
+          "nixpkgs"
+        ],
+        "pyproject-nix": [
+          "albedo",
+          "pyproject-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793272761,
+        "narHash": "sha256-3CE1CEwprYlHRlRVkXDkhqec0jjF9Cti7tdk8vVDsCM=",
+        "owner": "pyproject-nix",
+        "repo": "uv2nix",
+        "rev": "c361746c7d630d98b972378290547c8d35542a7a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pyproject-nix",
+        "repo": "uv2nix",
         "type": "github"
       }
     }
